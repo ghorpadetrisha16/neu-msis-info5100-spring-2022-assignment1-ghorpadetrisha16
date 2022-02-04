@@ -6,26 +6,28 @@ import java.io.*;
  *
  * @author Trisha
  */
-public class CarDetails implements Serializable{
+public class CarDetails implements Serializable {
 
-private String brand;				
-private String model;
-private String color;
-private String year;
-private	String EngineNo;
-private	String seatsNumber;
-private	String licensePlates;
-private	String ownerName;
-private String ownerTelephoneNumbers;
-private	String ownerEmailAddresses;
-private	String ownerDriverlicense;
-private	String ownerSocialSecurityNumber;
-private	String ownerAddress;
-private	String serviceRecords;
-private	String warrantyYear;
-//private String photo;
+private static final long serialVersionUID = -5511291884328004620L;
 
-    public CarDetails(String brand, String model, String color, String year, String EngineNo, String seatsNumber, String licensePlates, String ownerName, String ownerTelephoneNumbers, String ownerEmailAddresses, String ownerDriverlicense, String ownerSocialSecurityNumber, String ownerAddress, String serviceRecords, String warrantyYear) {
+    private String brand;
+    private String model;
+    private String color;
+    private String year;
+    private String EngineNo;
+    private String seatsNumber;
+    private String licensePlates;
+    private String ownerName;
+    private String ownerTelephoneNumbers;
+    private String ownerEmailAddresses;
+    private String ownerDriverlicense;
+    private String ownerSocialSecurityNumber;
+    private String ownerAddress;
+    private String serviceRecords;
+    private String warrantyYear;
+    private String photo;
+
+    public CarDetails(String brand, String model, String color, String year, String EngineNo, String seatsNumber, String licensePlates, String ownerName, String ownerTelephoneNumbers, String ownerEmailAddresses, String ownerDriverlicense, String ownerSocialSecurityNumber, String ownerAddress, String serviceRecords, String warrantyYear, String photo) {
         this.brand = brand;
         this.model = model;
         this.color = color;
@@ -41,9 +43,9 @@ private	String warrantyYear;
         this.ownerAddress = ownerAddress;
         this.serviceRecords = serviceRecords;
         this.warrantyYear = warrantyYear;
+        this.photo = photo;
     }
 
-    
     public String getBrand() {
         return brand;
     }
@@ -164,22 +166,30 @@ private	String warrantyYear;
         this.warrantyYear = warrantyYear;
     }
 
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
+
     public boolean equals(CarDetails carDetails) {
-        return (this.brand.equals(carDetails.brand) &&
-this.model.equals(carDetails.model) &&
-this.color.equals(carDetails.color) &&
-this.year.equals(carDetails.year) &&
-this.EngineNo.equals(carDetails.EngineNo) &&
-this.seatsNumber.equals(carDetails.seatsNumber) &&
-this.licensePlates.equals(carDetails.licensePlates) &&
-this.ownerName.equals(carDetails.ownerName) &&
-this.ownerTelephoneNumbers.equals(carDetails.ownerTelephoneNumbers) &&
-this.ownerEmailAddresses.equals(carDetails.ownerEmailAddresses) &&
-this.ownerDriverlicense.equals(carDetails.ownerDriverlicense) &&
-this.ownerSocialSecurityNumber.equals(carDetails.ownerSocialSecurityNumber) &&
-this.ownerAddress.equals(carDetails.ownerAddress) &&
-this.serviceRecords.equals(carDetails.serviceRecords) &&
-this.warrantyYear.equals(carDetails.warrantyYear)
-); 
+        return (this.brand.equals(carDetails.brand)
+                && this.model.equals(carDetails.model)
+                && this.color.equals(carDetails.color)
+                && this.year.equals(carDetails.year)
+                && this.EngineNo.equals(carDetails.EngineNo)
+                && this.seatsNumber.equals(carDetails.seatsNumber)
+                && this.licensePlates.equals(carDetails.licensePlates)
+                && this.ownerName.equals(carDetails.ownerName)
+                && this.ownerTelephoneNumbers.equals(carDetails.ownerTelephoneNumbers)
+                && this.ownerEmailAddresses.equals(carDetails.ownerEmailAddresses)
+                && this.ownerDriverlicense.equals(carDetails.ownerDriverlicense)
+                && this.ownerSocialSecurityNumber.equals(carDetails.ownerSocialSecurityNumber)
+                && this.ownerAddress.equals(carDetails.ownerAddress)
+                && this.serviceRecords.equals(carDetails.serviceRecords)
+                && this.warrantyYear.equals(carDetails.warrantyYear)
+                && this.photo.equals(carDetails.photo));
     }
 }

@@ -91,7 +91,7 @@ public class HomePage extends javax.swing.JFrame{
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // navigate to display car details page
-new DisplayCarDetails().setVisible(true);
+new DisplayDetails().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
